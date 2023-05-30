@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="questions.js"></script>
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="welcome-container">
+        <div class="queNumShow"></div>
+        <div class="welcome">
+            <img src="download.jpeg" alt="The Logo" style="max-width:100px ; max-height: 100px;">
+            <h1 style="color:aqua;">Hello USER !</h1>
+            <p style="font-weight: 800;"></p>
+            <input class="userName" type="text" maxlength="20" placeholder="Plese Enter Your Name Here....">
+            <button class="enterButton" onclick="enterButtonEvent()">Enter</button>
+        </div>
+
+        <div class="cat">
+            <h2>Please Select a Category</h2>
+            <div class="catList">
+                <button data-selectedCat="q1" class="catListItem cat1">Pipes and Cisterns</button>
+                <button data-selectedCat="q2" class="catListItem cat2">Probability</button>
+                <button data-selectedCat="q3" class="catListItem cat3">Problems on age</button>
+                <button data-selectedCat="q4" class="catListItem cat4">Profit and loss</button>
+            </div>
+        </div>
+    </div>
+    <div class="queAndAns">
+        <div class="timeAndScore">
+            <div class="timer">Time: <span class="timerSpan">0</span></div>
+            <div class="points">Score: 0</div>
+        </div>
+        <h3 class="catName" style="color: rgb(100, 72, 1);">Pipes and Cisterns</h3>
+        <div class="que">A pump can fill a tank with water in 2 hours. Because of a leak, it took 2 hours to fill the
+            tank. The leak can drain all the water of the tank in?</div>
+        <div class="ans">
+            <button class="answers">12hrs</button>
+            <button class="answers">13hrs</button>
+            <button class="answers">14hrs</button>
+            <button class="answers">15hrs</button>
+        </div>
+        <div class="mainBtns">
+            <button class="nxtBtn">Next</button>
+            <button class="goHomeBtn">Go home</button>
+        </div>
+
+    </div>
+
+    <div class="instructions">
+        <ol class="instruct">
+            <li>You Will be Given 10 Questions, Every quetion have 10 Marks</li>
+            <li>Quiz will Start as soon as you click Start Quiz ans A timer will Also start.</li>
+            <li>Attempt all quesyions in minimum time possible</li>
+        </ol>
+        <button class="instrucBtn" onclick="queStart()">Next</button>
+    </div>
+</body>
+
+</html>

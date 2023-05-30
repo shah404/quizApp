@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/Assets/26539479_7234325.jpg);
+    background-size: cover;
+
+}
+
+
+
+/* Welcome page Css */
+
+.welcome-container,
+.instructions,
+.queAndAns {
+    max-width: 90%;
+    border: 1px solid rgb(204, 197, 197);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(148, 144, 144, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-size: cover;
+    color: rgb(12, 12, 89);
+}
+
+.welcome,
+.cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    backdrop-filter: blur(1px);
+}
+
+.userName {
+    height: 35px;
+    width: 90%;
+    border: 0.5px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    font-weight: 700;
+}
+.enterButton{
+    background-color:chartreuse;
+    border-radius:50%;
+}
+
+button {
+    background-color: rgb(37, 101, 221);
+    border: none;
+    border-radius: 20px;
+}
+
+.welcome>button,
+.instrucBtn {
+    height: 40px;
+    width: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.cat {
+    margin-top: 20px;
+    color: blue;
+}
+
+.catList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    max-width: 350px;
+    padding: 10px 10px;
+}
+
+.catList>button {
+    height: 40px;
+    width: 150px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.4s;
+}
+
+.catList>button:hover,
+.welcome>button:hover:not([disabled]),
+.instrucBtn:hover {
+    background-color: blue;
+    transform: scalex(1.07);
+    border-radius: 5px;
+}
+
+button:hover:is([disabled]) {
+    cursor: no-drop;
+}
+
+
+/* Css for instructions div */
+.instructions {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+}
+
+.instruct {
+    padding: 10px;
+    backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    font-weight: 800;
+}
+
+/* Quetion and answewr Div CSS */
+
+.catName {
+    border: 2px solid rgb(98, 96, 100);
+    border-radius: 10px;
+    margin: auto;
+    height: 40px;
+    padding: 9px;
+    background-color: whitesmoke;
+}
+
+.queAndAns {
+    display: none;
+    flex-direction: column;
+    row-gap: 20px;
+    color: black;
+    text-transform: capitalize;
+    min-width: 500px;
+    max-width: 800px;
+    background-image:
+        linear-gradient(45deg,
+            rgba(183, 171, 171, 0.75),
+            rgba(37, 129, 220, 0.75));
+    background-size: cover;
+}
+
+@media (max-width: 500px) {
+    .queAndAns {
+        min-width: auto;
+    }
+
+}
+
+.timeAndScore {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.timer,
+.points {
+    border: 1px solid rgb(74, 21, 21);
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    background-color: rgb(88, 88, 142);
+    color: white;
+}
+
+.que {
+    padding: 15px;
+    border: 2px solid rgb(98, 96, 100);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.ans {
+    border: 2px solid rgb(98, 96, 100);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 340px;
+    margin: auto;
+    row-gap: 5px;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.answers {
+    border: 1px solid rgb(98, 96, 100);
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+
+.nxtBtn {
+    display: none;
+    height: 40px;
+    width: 60px;
+    font-weight: 600;
+    color: white;
+    margin: 0 auto;
+    transition: all 0.4s;
+    border-radius: 5px;
+}
+
+.nxtBtn:hover,
+.goHomeBtn:hover {
+    background-color: blue;
+    transform: scalex(1.07);
+}
+
+.answers:hover:not([disabled]) {
+    background-color: blue;
+    transform: scalex(1.07); 
+    color: white;
+}
+
+.incorrect {
+    background-color: lightcoral;
+}
+
+.correct {
+    background-color: rgb(53, 251, 60);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    backdrop-filter: blur(1px);
+}
+
+.resultItem {
+    font-weight: 600;
+    border-bottom: 2px double black;
+    color: rgb(96, 7, 160);
+
+}
+
+.queNumShow {
+    display: none;
+    background-image: none;
+    background-color: none;
+    color: red;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mainBtns {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.goHomeBtn,
+.enterButton {
+    border-radius: 5px;
+    display: none;
+    height: 40px;
+    width: 60px;
+    font-weight: 600;
+    color: white;
+    margin: 0 auto;
+    padding: 3px;
+    transition: all 0.4s;
+}
+
+.enterButton {
+    display: block;
+}
+
+.usernNameSpan {
+    color: Red;
+}
